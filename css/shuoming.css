@@ -1,0 +1,22 @@
+#heng{
+	width:100%;
+	margin-top:10px;
+	border:4px solid #dea5ee;
+	box-sizing: border-box;
+}
+.tu{
+	width:100%;
+	height:500px;
+}
+.tu img{
+	width:100%;
+}
+#heng p{
+	width:100%;
+	text-indent:2em;
+	margin-top:10px;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 20px;
+	box-sizing: border-box;
+}

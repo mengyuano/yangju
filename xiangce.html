@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>生活日迹</title>
+<link rel="stylesheet" href="css/toubu.css">
+<link rel="stylesheet" href="css/xiangce.css">
+<script src="js/jquery-2.1.0.js" ></script>
+</head>
+<body>
+<div id="shouye">
+   <div id="zhong">
+      <div id="top"></div>
+      <div id="ding">
+         <div id="dao">
+              <ul>
+               <li style="margin:0;"><a href="index.html">首页</a></li>
+               <li><a href="">自荐书</a></li>
+               <li><a href="ziliao.html">个人资料</a></li>
+               <li><a href="shuoming.html">个人说明</a></li>
+             </ul>
+          </div>
+        </div>
+        <div id="heng">
+          <p>尊敬的领导： </p>
+          <p>您好! </p>
+          <p>我是西安汽车科技职业学院沃尔沃校企合作班的学员杨举，今天我无比虔诚向贵公司递上我的这份简历。 </p>
+          <p>通过在沃尔沃校企合作班这一年来的学习和实践过程中，我建立了一个健全的职业素质和职业操守，并且掌握了有一定分析问题，解决问题的能力和较强的动手能力。</p>
+          <p>我有很强的拼博意识，对自己充满信心。深刻的理解能力，敏锐的洞察力，独立的思考能力是我大学生活中最大的收获。当然，最重要的还是学会如何做人，做事。</p>
+          <p>我相信我较强的实际操作能力，将是把理论知识转化为实际专业技能的有力保证。 </p>
+          <p>如果我能够得到贵单位的青睐，我一定会以不断学习、积极进取的精神竭诚为贵单位服务，与贵单位共同发展，共创美好未来! </p>
+          <p>自荐人：杨举</p>
+          <p>2017年10月1日</p>
+        </div>
+        <div class="dibu"><img src="img/24.jpg"></div>
+   </div>
+</div>
+</body>
+<script type="text/javascript" src="js/xiding.js" ></script>
+<script>
+var i=setInterval(move,2000);
+var num=0;
+function move(){
+	num++;
+	if(num==$(".tu1").length){num=0;}
+		$(".tu1").css("display","none").eq(num).css("display","block")
+		$(".dian").css("background","blue").eq(num).css("background","red")
+	}
+$("#heng").hover(function(){
+		clearInterval(i);
+	},function(){
+		i=setInterval(move,2000);
+	})
+$('.an1').click(function(){
+	move();
+	})
+$('.an').click(function(){
+	num--;
+	if(num<0){num=$(".tu1").length-1}
+	$(".tu1").css("display","none").eq(num).css("display","block")
+	$(".dian").css("background","blue").eq(num).css("background","red")
+})
+$(".dian").mousemove(function(){
+	$(".tu1").css("display","none").eq($(this).index()).css("display","block");
+	$(".dian").css("background","blue").eq($(this).index()).css("background","red");
+	num=$(this).index()
+	})
+$('#heng').hover(function(){
+	$('.an').css('display','block')
+	$('.an1').css('display','block')
+   },function(){
+	  $('.an').css('display','none')
+	   $('.an1').css('display','none')
+	   })
+$('.xiao:even').css({'transform':'rotateZ(10deg)','background':'#B5FFB5'})
+$('.xiao:odd').css('transform','rotateZ(-10deg)')
+$('.xiao').click(function(){
+	$('.tu2').html($(this).html())
+	})
+var o=setInterval(mo,100)
+var nu=0;
+function mo(){
+	nu-=10;
+	if(nu<-150){nu=350}
+	$('.heng1 p').css('left',nu)
+	}
+$('.tu').eq(9).click(function(){
+	$('.da').slideToggle(500);
+})
+</script>	
+</html>
